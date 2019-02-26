@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+	<html lang="pt-br">
+		<head>
+			<meta charset="utf-8"/>
+			<title>Noticias</title>
+			<style>
+					table, th, td {
+					  border: 1px solid black;
+					}
+					</style>
+		</head>
+	<body>
+
+		<h1>Noticias</h1>
+		<h2><a href="http://localhost:3000/formulario_inclusao_noticia">FORMULARIO INCLUSAO NOTICIA</a></h2>
+
+		<table >
+			<tr>
+				<td>ID</td>
+				<td>Titulo</td>
+				<td>Resumo</td>
+				<td>Autor</td>
+				<td>Data</td>
+				
+				
+			</tr>
+
+			<% for(var i=0; i < noticias.length; i++ ) { %>
+		
+			<tr>
+				<td><%= noticias[i].id_noticia %></td>
+				<td><%= noticias[i].titulo %></td>
+				<td><%= noticias[i].resumo %></td>
+				<td><%= noticias[i].autor %></td>		 		 
+				<td><%= noticias[i].data_noticia %></td>
+			</tr>
+
+			<% } %>
+
+			
+		</table>
+
+	</body>
+</html>
+
+
+<!-- <% noticias.forEach((noticia)=>{ %>
+	<tr>
+	  <td><%= noticia.id_noticia %></td>
+	  <td><%= noticia.titulo %></td>
+	  <td><%= noticia.noticia %></td>
+	</tr>
+	<% }) %> -->
