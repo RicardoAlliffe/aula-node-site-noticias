@@ -1,5 +1,3 @@
-var bodyParser = require('body-parser')
-
 module.exports = function(application){
     application.get('/formulario_inclusao_noticia', function(req, res){ 
 
